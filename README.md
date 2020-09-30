@@ -26,7 +26,7 @@ Con:
 Lazy Initialization
 -------------------
 Pro:
- - Faster startup time of application for the user to start interacting.
+ - Shorter boot time of application.
 
 Con:
  - Higher latency at the time the singleton is used.
@@ -36,6 +36,7 @@ Thread Safe Lazy Initialization
 -------------------------------
 Pro:
  - It is thread safe.
+ - Shorter boot time of application.
 
 Con:
  - It reduces the performance because of cost associated with the synchronized method, although we need it only for the first few threads who might create the separate instances.
