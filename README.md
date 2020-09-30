@@ -1,6 +1,6 @@
 Java Singleton Patterns
 =======================
-Listing pro's and con's of different approaches to create a Singleton Pattern.
+Listing pros and cons of different approaches to create a Singleton Pattern.
 
 Eager Initialization
 --------------------
@@ -48,18 +48,18 @@ Pro:
  - It prevents the cost of a synchronized method being called everytime we need the singleton object.
 
 Con:
- - It is also synchronized for concurrent use and can be slow too.
+ - It is synchronized for concurrent use and can still be slow.
  - Recognizing and reproducing failures can be difficult because of intermittent occurrence.
  
 Bill Pugh's
 -----------
 Pro:
- - When the singleton class is loaded, SingletonHelper class is not loaded into memory and only when someone calls the getInstance method, this class gets loaded and creates the Singleton class instance.
+ - When the singleton class is loaded, SingletonHelper class is not loaded into memory. Only when someone calls the getInstance method, this class gets loaded and creates the Singleton class instance.
  - This is the most widely used approach for Singleton class as it doesn’t require synchronization.
- - The nested class is referenced no earlier (and therefore loaded no earlier by the class loader) than the moment that getInstance() is called. Thus, this solution is thread-safe without requiring special language constructs.
+ - This solution is thread-safe without requiring special language constructs.
 
 ENUM
 ----
 Pro:
- - Only singleton that can handle reflection.
+ - It is the only singleton that can handle reflection.
  - Very easy to read.
