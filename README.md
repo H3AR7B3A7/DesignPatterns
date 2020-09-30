@@ -24,6 +24,7 @@ Lazy Initialization
 -------------------
 Pro:
  - Faster startup time of application for the user to start interacting.
+
 Con:
  - Higher latency at the time the singleton is used.
  - If multiple threads are inside the if loop at the same time. It will destroy the singleton pattern and both threads will get the different instances of singleton class.
@@ -32,6 +33,7 @@ Thread Safe Lazy Initialization
 -------------------------------
 Pro:
  - It is thread safe.
+
 Con:
  - It reduces the performance because of cost associated with the synchronized method, although we need it only for the first few threads who might create the separate instances.
  - Unfortunately, synchronized methods run much slower — as much as 100 times slower — than ordinary unsynchronized methods.
@@ -40,6 +42,7 @@ Double-Checked Locking
 ----------------------
 Pro:
  - It prevents the cost of a synchronized method being called everytime we need the singleton object.
+
 Con:
  - It is also synchronized for concurrent use and can be slow too.
  - Recognizing and reproducing failures can be difficult because of intermittent occurrence.
