@@ -5,19 +5,22 @@ Listing pro's and con's of different approaches to create a Singleton Pattern.
 Eager Initialization
 --------------------
 Pro:
- - The instance is not constructed until the class is used.
+ - Lower latency at the time the singleton is used.
  - There is no need to synchronize the getInstance() method, meaning all threads will see the same instance and no (expensive) locking is required.
  - The final keyword means that the instance cannot be redefined, ensuring that one (and only one) instance ever exists.
 
 Con:
- - The instance is created even though client application might not be using it.
+ - The instance is created even though client application might not be using it. The application will take longer to boot.
  - Also, this method doesn’t provide any options for exception handling.
  
 Static Block Initialization
 ---------------------------
-(Similar to Eager Initialization)
+Pro:
+ - Lower latency at the time the singleton is used.
+ - The final keyword means that the instance cannot be redefined, ensuring that one (and only one) instance ever exists.
 
 Con:
+ - The instance is created even though client application might not be using it. The application will take longer to boot.
  - If multiple threads are inside the if loop at the same time, both threads will get a different instance of the singleton class.
 
 Lazy Initialization
