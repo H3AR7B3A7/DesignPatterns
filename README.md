@@ -18,7 +18,7 @@ Static Block Initialization
 (Similar to Eager Initialization)
 
 Con:
- - If multiple threads are inside the if loop at the same time. It will destroy the singleton pattern and both threads will get the different instances of singleton class.
+ - If multiple threads are inside the if loop at the same time, both threads will get a different instance of the singleton class.
 
 Lazy Initialization
 -------------------
@@ -27,7 +27,7 @@ Pro:
 
 Con:
  - Higher latency at the time the singleton is used.
- - If multiple threads are inside the if loop at the same time. It will destroy the singleton pattern and both threads will get the different instances of singleton class.
+ - If multiple threads are inside the if loop at the same time, both threads will get a different instance of the singleton class.
 
 Thread Safe Lazy Initialization
 -------------------------------
