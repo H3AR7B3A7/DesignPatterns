@@ -1,3 +1,5 @@
+package SingletonPattern;
+
 /**
  * Bill Pugh's
  */

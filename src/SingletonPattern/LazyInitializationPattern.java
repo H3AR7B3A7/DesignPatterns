@@ -1,3 +1,5 @@
+package SingletonPattern;
+
 /**
  * Lazy Initialization
  */
@@ -27,5 +29,6 @@ class LazySingleton {
 
     public void printMessage(){
         System.out.println("Inside Singleton function. Singleton Instance: "+this.hashCode());
+        System.out.println();
     }
 }

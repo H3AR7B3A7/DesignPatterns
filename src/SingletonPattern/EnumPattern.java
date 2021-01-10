@@ -1,3 +1,5 @@
+package SingletonPattern;
+
 /**
  * ENUM Singleton
  */
@@ -15,7 +17,7 @@ enum EnumSingleton {
     Instance;
 
     // Constructor called by JVM implicitly, but can also be declared.
-//    private EnumSingleton() {
+//    private SingletonPattern.EnumSingleton() {
 //    }
 
     public void printMessage(){

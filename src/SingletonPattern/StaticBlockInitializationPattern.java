@@ -1,3 +1,5 @@
+package SingletonPattern;
+
 /**
  * Static Block Initialization
  */

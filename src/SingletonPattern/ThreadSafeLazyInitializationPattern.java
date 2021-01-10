@@ -1,3 +1,5 @@
+package SingletonPattern;
+
 /**
  * Thread Safe Lazy Initialization
  */
