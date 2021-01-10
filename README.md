@@ -95,3 +95,11 @@ The intent of the Builder design pattern is to separate the construction of a co
 # Structural Design Patterns
 
 ## Adapter Pattern
+We use the adapter pattern (also known as wrapper, an alternative naming shared with the decorator pattern) to allow the interface of an existing class to be used as another interface.
+It is often used to make existing classes work with others without modifying their source code.
+An example is an adapter that converts the interface of a Document Object Model of an XML document into a tree structure that can be displayed.
+
+## Bridge Pattern
+We use the bridge pattern to "decouple an abstraction from its implementation so that the two can vary independently". 
+The bridge uses encapsulation, aggregation, and can use inheritance to separate responsibilities into different classes.
+

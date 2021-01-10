@@ -4,7 +4,7 @@ package SingletonPattern;
  * Thread Safe Lazy Initialization
  */
 public class ThreadSafeLazyInitializationPattern {
-    public static void main(String[] args){
+    public static void main(String[] args) {
         ThreadSafeLazySingleton singleton = ThreadSafeLazySingleton.getInstance();
         singleton.printMessage();
 
@@ -18,15 +18,16 @@ class ThreadSafeLazySingleton {
 
     public static synchronized ThreadSafeLazySingleton getInstance() {
         if (INSTANCE == null) {
-            INSTANCE = new ThreadSafeLazySingleton ();
+            INSTANCE = new ThreadSafeLazySingleton();
         }
         return INSTANCE;
     }
 
-    private ThreadSafeLazySingleton() {}
+    private ThreadSafeLazySingleton() {
+    }
 
 
-    public void printMessage(){
-        System.out.println("Inside Singleton function. Singleton Instance: "+this.hashCode());
+    public void printMessage() {
+        System.out.println("Inside Singleton function. Singleton Instance: " + this.hashCode());
     }
 }

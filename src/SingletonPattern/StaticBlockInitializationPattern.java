@@ -4,7 +4,7 @@ package SingletonPattern;
  * Static Block Initialization
  */
 public class StaticBlockInitializationPattern {
-    public static void main(String[] args){
+    public static void main(String[] args) {
         StaticBlockSingleton singleton = StaticBlockSingleton.getInstance();
         singleton.printMessage();
 
@@ -25,11 +25,14 @@ class StaticBlockSingleton {
     }
 
 
-    private StaticBlockSingleton() {}
+    private StaticBlockSingleton() {
+    }
 
-    public static StaticBlockSingleton getInstance() { return INSTANCE; }
+    public static StaticBlockSingleton getInstance() {
+        return INSTANCE;
+    }
 
-    public void printMessage(){
-        System.out.println("Inside Singleton function. Singleton Instance: "+this.hashCode());
+    public void printMessage() {
+        System.out.println("Inside Singleton function. Singleton Instance: " + this.hashCode());
     }
 }

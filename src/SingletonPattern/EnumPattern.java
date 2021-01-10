@@ -4,7 +4,7 @@ package SingletonPattern;
  * ENUM Singleton
  */
 public class EnumPattern {
-    public static void main(String[] args){
+    public static void main(String[] args) {
         EnumSingleton singleton = EnumSingleton.Instance;
         singleton.printMessage();
 
@@ -20,7 +20,7 @@ enum EnumSingleton {
 //    private SingletonPattern.EnumSingleton() {
 //    }
 
-    public void printMessage(){
-        System.out.println("Singleton Instance : "+ Instance.hashCode());
+    public void printMessage() {
+        System.out.println("Singleton Instance : " + Instance.hashCode());
     }
 }

@@ -5,7 +5,7 @@ package SingletonPattern;
  */
 public class EagerInitializationPattern {
 
-    public static void main(String[] args){
+    public static void main(String[] args) {
         EagerInitializationSingleton singleton = EagerInitializationSingleton.getInstance();
         singleton.printMessage();
 
@@ -18,11 +18,14 @@ class EagerInitializationSingleton {
 
     private static final EagerInitializationSingleton INSTANCE = new EagerInitializationSingleton();
 
-    private EagerInitializationSingleton() {}
+    private EagerInitializationSingleton() {
+    }
 
-    public static EagerInitializationSingleton getInstance() { return INSTANCE; }
+    public static EagerInitializationSingleton getInstance() {
+        return INSTANCE;
+    }
 
-    public void printMessage(){
-        System.out.println("Inside Singleton function. Singleton Instance: "+this.hashCode());
+    public void printMessage() {
+        System.out.println("Inside Singleton function. Singleton Instance: " + this.hashCode());
     }
 }

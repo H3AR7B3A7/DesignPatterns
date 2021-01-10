@@ -13,13 +13,15 @@ public class BuilderPattern {
     }
 }
 
-interface Packing{
+interface Packing {
     String pack();
 }
 
 interface Item {
     String name();
+
     Packing packing();
+
     float price();
 }
 
@@ -90,11 +92,11 @@ class Coke extends ColdDrink {
 class Meal {
     private final List<Item> items = new ArrayList<Item>();
 
-    public void addItem(Item item){
+    public void addItem(Item item) {
         items.add(item);
     }
 
-    public float getCost(){
+    public float getCost() {
         float cost = 0.0f;
 
         for (Item item : items) {
@@ -103,7 +105,7 @@ class Meal {
         return cost;
     }
 
-    public void showItems(){
+    public void showItems() {
 
         for (Item item : items) {
             System.out.print("Item : " + item.name());
@@ -115,7 +117,7 @@ class Meal {
 
 class MealBuilder {
 
-    public Meal prepareDefaultMeal(){
+    public Meal prepareDefaultMeal() {
         Meal meal = new Meal();
         meal.addItem(new ChickenBurger());
         meal.addItem(new Coke());

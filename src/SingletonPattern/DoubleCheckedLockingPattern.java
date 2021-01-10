@@ -4,7 +4,7 @@ package SingletonPattern;
  * Double-Checked Locking
  */
 public class DoubleCheckedLockingPattern {
-    public static void main(String[] args){
+    public static void main(String[] args) {
         DoubleCheckedLockingSingleton singleton = DoubleCheckedLockingSingleton.getInstance();
         singleton.printMessage();
 
@@ -18,10 +18,8 @@ class DoubleCheckedLockingSingleton {
 
     public static DoubleCheckedLockingSingleton getInstance() {
         if (instance == null) {
-            synchronized (DoubleCheckedLockingSingleton.class)
-            {
-                if (instance == null)
-                {
+            synchronized (DoubleCheckedLockingSingleton.class) {
+                if (instance == null) {
                     instance = new DoubleCheckedLockingSingleton();
                 }
             }
@@ -29,9 +27,10 @@ class DoubleCheckedLockingSingleton {
         return instance;
     }
 
-    private DoubleCheckedLockingSingleton(){}
+    private DoubleCheckedLockingSingleton() {
+    }
 
-    public void printMessage(){
-        System.out.println("Inside Singleton function. Singleton Instance: "+this.hashCode());
+    public void printMessage() {
+        System.out.println("Inside Singleton function. Singleton Instance: " + this.hashCode());
     }
 }

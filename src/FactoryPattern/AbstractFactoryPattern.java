@@ -49,16 +49,16 @@ class RoundedRhomboidRectangle implements Form {
 }
 
 abstract class AbstractFormFactory {
-    abstract Form getForm(String shapeType) ;
+    abstract Form getForm(String shapeType);
 }
 
 class FormFactory extends AbstractFormFactory {
 
     @Override
     public Form getForm(String formType) {
-        if(formType.equalsIgnoreCase("RECTANGLE")){
+        if (formType.equalsIgnoreCase("RECTANGLE")) {
             return new Rect();
-        }else if(formType.equalsIgnoreCase("SQUARE")){
+        } else if (formType.equalsIgnoreCase("SQUARE")) {
             return new RhomboidRectangle();
         }
         return null;
@@ -69,9 +69,9 @@ class RoundedFormFactory extends AbstractFormFactory {
 
     @Override
     Form getForm(String formType) {
-        if(formType.equalsIgnoreCase("RECTANGLE")){
+        if (formType.equalsIgnoreCase("RECTANGLE")) {
             return new RoundedRect();
-        }else if(formType.equalsIgnoreCase("SQUARE")){
+        } else if (formType.equalsIgnoreCase("SQUARE")) {
             return new RoundedRhomboidRectangle();
         }
         return null;
@@ -79,10 +79,10 @@ class RoundedFormFactory extends AbstractFormFactory {
 }
 
 class FactoryProducer {
-    public static AbstractFormFactory getFactory(boolean rounded){
-        if(rounded){
+    public static AbstractFormFactory getFactory(boolean rounded) {
+        if (rounded) {
             return new RoundedFormFactory();
-        }else{
+        } else {
             return new FormFactory();
         }
     }
