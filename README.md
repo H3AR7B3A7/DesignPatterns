@@ -7,7 +7,7 @@ Design patterns...
 - Are well-proved and testified solutions since they have been built upon the knowledge and experience of expert software developers.
 - Don't guarantee an absolute solution to a problem. They provide clarity to the system architecture and the possibility of building a better system.
 
-Design patterns could be divided in:
+Design patterns can be divided in:
 - Creational Design Patterns
 - Structural Design Patterns
 - Behavioral Design Patterns
@@ -16,29 +16,29 @@ Design patterns could be divided in:
 
 ## Singleton Pattern
 The singleton pattern is a software design pattern that restricts the instantiation of a class to one "single" instance. 
-This is useful when exactly one object is needed to coordinate actions across the system. The term comes from the mathematical concept of a singleton.
-Critics consider the singleton to be an anti-pattern in that it is frequently used in scenarios where it is not beneficial, introduces unnecessary 
-restrictions in situations where a sole instance of a class is not actually required, and introduces global state into an application.
+This is useful when we need exactly one object to coordinate actions across the system. The term comes from the mathematical concept of a singleton.
+Critics consider the singleton to be an anti-pattern in that it is frequently used in scenarios where it is not beneficial, creating unnecessary 
+restrictions in situations where we do not require a sole instance of a class, which constitutes a global state in the application.
 
 ### Different approaches: Pros and Cons
 
 #### Eager Initialization
 Pro:
- - Lower latency at the time the singleton is used.
- - There is no need to synchronize the getInstance() method, meaning all threads will see the same instance and no (expensive) locking is required.
+ - Lower latency when using the singleton.
+ - There is no need to synchronize the getInstance() method, meaning all threads will see the same instance, which requires no (expensive) locking.
  - The final keyword means that the instance cannot be redefined, ensuring that one (and only one) instance ever exists.
 
 Con:
- - The instance is created even though client application might not be using it. The application will take longer to boot.
- - Also, this method doesn’t provide any options for exception handling.
+ - The JVM creates an instance even though the client application might not be using it. The application will take longer to boot.
+ - Also, this method doesn't provide any options for exception handling.
  
 #### Static Block Initialization
 Pro:
- - Lower latency at the time the singleton is used.
+ - Lower latency when using the singleton.
  - The final keyword means that the instance cannot be redefined, ensuring that one (and only one) instance ever exists.
 
 Con:
- - The instance is created even though client application might not be using it. The application will take longer to boot.
+ - The JVM creates an instance even though the client application might not be using it. The application will take longer to boot.
  - If multiple threads are inside the if loop at the same time, both threads will get a different instance of the singleton class.
 
 #### Lazy Initialization
@@ -46,7 +46,7 @@ Pro:
  - Shorter boot time of application.
 
 Con:
- - Higher latency at the time the singleton is used.
+ - Higher latency when using the singleton.
  - If multiple threads are inside the if loop at the same time, both threads will get a different instance of the singleton class.
 
 #### Thread Safe Lazy Initialization
@@ -56,11 +56,11 @@ Pro:
 
 Con:
  - It reduces the performance because of cost associated with the synchronized method, although we need it only for the first few threads who might create the separate instances.
- - Unfortunately, synchronized methods run much slower — as much as 100 times slower — than ordinary unsynchronized methods.
+ - Unfortunately, synchronized methods run much slower — as much as 100 times slower — than ordinary asynchronous methods.
 
 #### Double-Checked Locking
 Pro:
- - It prevents the cost of a synchronized method being called everytime we need the singleton object.
+ - It prevents the cost of calling a synchronized method everytime we need the singleton object.
 
 Con:
  - It is synchronized for concurrent use and can still be slow.
@@ -68,8 +68,8 @@ Con:
  
 #### Bill Pugh's
 Pro:
- - When the singleton class is loaded, SingletonHelper class is not loaded into memory. Only when someone calls the getInstance method, this class gets loaded and creates the Singleton class instance.
- - This is the most widely used approach for Singleton class as it doesn’t require synchronization.
+ - When the JVM loads the singleton class, it doesn't load the SingletonHelper class into memory. Only when someone calls the getInstance method, this class gets loaded and creates the Singleton class instance.
+ - This is the most widely used approach for Singleton class as it doesn't require synchronization.
  - This solution is thread-safe without requiring special language constructs.
 
 #### ENUM
@@ -79,7 +79,7 @@ Pro:
 
 ## Prototype Pattern
 We use the prototype pattern when the type of objects to create is determined by a prototypical instance, which is cloned to produce new objects.  
-This pattern is used to:
+We use this pattern to:
 - Avoid subclasses of an object creator in the client application, like the factory method pattern does.
 - Avoid the inherent cost of creating a new object in the standard way (e.g., using the 'new' keyword) when it is prohibitively expensive for a given application.
 
@@ -102,4 +102,25 @@ An example is an adapter that converts the interface of a Document Object Model 
 ## Bridge Pattern
 We use the bridge pattern to "decouple an abstraction from its implementation so that the two can vary independently". 
 The bridge uses encapsulation, aggregation, and can use inheritance to separate responsibilities into different classes.
+
+## Composite Pattern
+We use the composite pattern to describe a group of objects that are treated the same way as a single instance of the same type of object. 
+The intent of a composite is to "compose" objects into tree structures to represent part-whole hierarchies. 
+Implementing the composite pattern lets clients treat individual objects and compositions uniformly.
+
+## Decorator Pattern
+We use the decorator pattern to allow behavior to be added to an individual object, dynamically, without affecting the behavior of other objects from the same class.
+The decorator pattern is often useful for adhering to the Single Responsibility Principle, as it allows functionality to be divided between classes with unique areas of concern.
+Decorator use can be more efficient than subclassing, because an object's behavior can be augmented without instantiating an entirely new object.
+
+## Facade Pattern
+The facade pattern serves as a front-facing interface masking more complex underlying or structural code.  
+A facade can:
+- Improve the readability and usability of a software library by masking interaction with more complex components behind a single (and often simplified) API
+- Provide a context-specific interface to more generic functionality (complete with context-specific input validation)
+- Serve as a launching point for a broader refactor of monolithic or tightly-coupled systems in favor of more loosely-coupled code
+
+Developers often use the facade pattern when a system is very complex or difficult to understand because the system has many interdependent classes or because its source code is unavailable.
+This pattern hides the complexities of the larger system and provides a simpler interface to the client. It typically involves a single wrapper class containing a set of members required by the client.
+These members access the system on behalf of the facade client and hide the implementation details.
 
