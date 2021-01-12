@@ -126,7 +126,7 @@ These members access the system on behalf of the facade client and hide the impl
 
 ## Flyweight Pattern
 A flyweight is an object that minimizes memory usage by sharing as much data as possible with other similar objects. It is a way to use objects in large numbers when a simple repeated representation would 
-use an unacceptable amount of memory. Often some parts of the object state can be shared, and it is common practice to hold them in external data structures and pass them to the objects temporarily when they are used.
+use an unacceptable amount of memory. Often some parts of the object state can be shared. The flyweight object holds the objects in an external data structure and passes them when they are needed.
 
 A classic example usage of the flyweight pattern is the data structures for graphical representation of characters in a word processor. 
 For each character in a document, it might be desirable to have a glyph object containing its font outline, font metrics, and other formatting data, but this would amount to hundreds or thousands of bytes for each character.
