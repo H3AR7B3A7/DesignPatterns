@@ -124,3 +124,20 @@ Developers often use the facade pattern when a system is very complex or difficu
 This pattern hides the complexities of the larger system and provides a simpler interface to the client. It typically involves a single wrapper class containing a set of members required by the client.
 These members access the system on behalf of the facade client and hide the implementation details.
 
+## Flyweight Pattern
+A flyweight is an object that minimizes memory usage by sharing as much data as possible with other similar objects. It is a way to use objects in large numbers when a simple repeated representation would 
+use an unacceptable amount of memory. Often some parts of the object state can be shared, and it is common practice to hold them in external data structures and pass them to the objects temporarily when they are used.
+
+A classic example usage of the flyweight pattern is the data structures for graphical representation of characters in a word processor. 
+For each character in a document, it might be desirable to have a glyph object containing its font outline, font metrics, and other formatting data, but this would amount to hundreds or thousands of bytes for each character.
+Instead, for every character there might be a reference to a flyweight glyph object shared by every instance of the same character in the document. Only the position of each character in the document would need to be stored internally.
+
+## Proxy Pattern
+A proxy, in its most general form, is a class functioning as an interface to something else. The proxy could interface to anything: a network connection, a large object in memory, a file, or some other resource that is expensive or impossible to duplicate.
+In short, a proxy is a wrapper or agent object that is being called by the client to access the real serving object behind the scenes. Use of the proxy can simply be forwarding to the real object, or can provide additional logic. 
+In the proxy, extra functionality can be provided, for example caching when operations on the real object are resource intensive, or checking preconditions before invoking operations on the real object. 
+For the client, usage of a proxy object is similar to using the real object, because both implement the same interface.
+
+# Behavioral Design Patterns
+
+...
