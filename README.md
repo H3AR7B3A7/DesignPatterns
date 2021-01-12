@@ -133,7 +133,7 @@ For each character in a document, it might be desirable to have a glyph object c
 Instead, for every character there might be a reference to a flyweight glyph object shared by every instance of the same character in the document. Only the position of each character in the document would need to be stored internally.
 
 ## Proxy Pattern
-A proxy, in its most general form, is a class functioning as an interface to something else. The proxy could interface to anything: a network connection, a large object in memory, a file, or some other resource that is expensive or impossible to duplicate.
+A proxy is a class functioning as an interface to something else. The proxy could interface to anything: a network connection, a large object in memory, a file, or some other resource that is expensive or impossible to duplicate.
 In short, a proxy is a wrapper or agent object that is being called by the client to access the real serving object behind the scenes. Use of the proxy can simply be forwarding to the real object, or can provide additional logic. 
 In the proxy, extra functionality can be provided, for example caching when operations on the real object are resource intensive, or checking preconditions before invoking operations on the real object. 
 For the client, usage of a proxy object is similar to using the real object, because both implement the same interface.
