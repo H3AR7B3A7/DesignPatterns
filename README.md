@@ -56,7 +56,7 @@ Pro:
 
 Con:
  - It reduces the performance because of cost associated with the synchronized method, although we need it only for the first few threads who might create the separate instances.
- - Unfortunately, synchronized methods run much slower — as much as 100 times slower — than ordinary asynchronous methods.
+ - Unfortunately, synchronized methods run much slower than ordinary asynchronous methods.
 
 #### Double-Checked Locking
 Pro:
