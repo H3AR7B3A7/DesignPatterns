@@ -70,7 +70,7 @@ class PetBird implements Bird {
 class PetRabbit implements Rabbit {
     @Override
     public void speak() {
-        System.out.println("Sniffels..");
+        System.out.println("Sniffles..");
     }
 
     @Override
