@@ -168,3 +168,7 @@ Using an invoker object allows bookkeeping about command executions to be conven
 
 The central ideas of this design pattern closely mirror the semantics of first-class functions and higher-order functions in functional programming languages. Specifically, the invoker object is a higher-order function of which the command object is a first-class argument.
 
+#Interpreter Pattern
+We use the interpreter pattern to specify how to evaluate sentences in a language. The basic idea is to have a class for each symbol (terminal or non-terminal) in a specialized computer language. 
+The syntax tree of a sentence in the language is an instance of the composite pattern and is used to evaluate (interpret) the sentence for a client.
+
