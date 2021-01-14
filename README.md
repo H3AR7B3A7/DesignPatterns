@@ -140,4 +140,18 @@ For the client, usage of a proxy object is similar to using the real object, bec
 
 # Behavioral Design Patterns
 
-...
+## Chain Of Responsibility Pattern
+The chain-of-responsibility pattern consists of a source of command objects, and a series of processing objects. Each processing object contains logic that defines the types of command objects that it can handle. 
+The rest it will pass to the next processing object in the chain. A mechanism also exists for adding new processing objects to the end of this chain.
+
+In a variation of the standard chain-of-responsibility model, some handlers may act as dispatchers, capable of sending commands out in a variety of directions, forming a tree of responsibility.
+In some cases, this can occur recursively, with processing objects calling higher-up processing objects with commands that attempt to solve some smaller part of the problem.
+When this is the case, recursion continues until the handler finishes processing the command, or the entire tree has been explored. For example, an XML interpreter might work in this manner.
+
+This pattern promotes the idea of loose coupling.
+
+The chain-of-responsibility pattern is structurally nearly identical to the decorator pattern. 
+The difference is that for the decorator, all classes handle the request, while for the chain of responsibility, exactly one of the classes in the chain handles the request.
+This is a strict definition of the Responsibility concept in the GoF book. However, many implementations (such as loggers, or UI event handling, or servlet filters, etc.) allow several elements in the chain to take responsibility.
+
+## Command Pattern
