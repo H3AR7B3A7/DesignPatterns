@@ -18,6 +18,15 @@ abstract class Subject{
 }
 
 class ConcreteSubject extends Subject {
+
+    ConcreteSubject (){
+        createSubject();
+    }
+
+    private void createSubject() {
+        System.out.println("Creating subject...");
+    }
+
     @Override
     public void doSomeWork() {
         System.out.println("Working...");
@@ -28,6 +37,10 @@ class Proxy extends Subject {
     static Subject subject;
     static int count = 0;
 
+    /**
+     * COMMENTED OUT = LAZY INSTANTIATION
+     * UNCOMMENT TO SEE DIFFERENCE WITHOUT...
+     */
 //    public Proxy() {
 //        subject = new ConcreteSubject();
 //        count++;
