@@ -155,7 +155,8 @@ The difference is that for the decorator, all classes handle the request, while 
 This is a strict definition of the Responsibility concept in the GoF book. However, many implementations (such as loggers, or UI event handling, or servlet filters, etc.) allow several elements in the chain to take responsibility.
 
 ## Command Pattern
-In the command pattern, we use an object to encapsulate all information needed to perform an action or trigger an event at a later time. This information includes the method name, the object that owns the method and values for the method parameters.
+In the command pattern, we use an object to encapsulate all information needed to perform an action or trigger an event at a later time. This information includes the method name, the object that owns the method and values for the 
+method parameters.
 
 Four terms always associated with the command pattern are command, receiver, invoker and client. A command object knows about the receiver and invokes its method. We store values for parameters of the receiver method in the command.
 We store the receiver object to execute these methods in the command object by aggregation. The receiver then does the work when we call the execute-method in command. 
@@ -164,11 +165,20 @@ A client object holds the invoker object(s), command objects and receiver object
 The client decides which commands to execute at which points. To execute a command, it passes the command object to the invoker object.
 
 Using command objects makes it easier to construct general components that need to delegate, sequence or execute method calls at a time of their choosing without the need to know the class of the method or the method parameters. 
-Using an invoker object allows bookkeeping about command executions to be conveniently performed, as well as implementing different modes for commands, which are managed by the invoker object, without the need for the client to be aware of the existence of bookkeeping or modes.
+Using an invoker object allows bookkeeping about command executions to be conveniently performed, as well as implementing different modes for commands, which are managed by the invoker object, without the need for the client to 
+be aware of the existence of bookkeeping or modes.
 
-The central ideas of this design pattern closely mirror the semantics of first-class functions and higher-order functions in functional programming languages. Specifically, the invoker object is a higher-order function of which the command object is a first-class argument.
+The central ideas of this design pattern closely mirror the semantics of first-class functions and higher-order functions in functional programming languages. Specifically, the invoker object is a higher-order function of which 
+the command object is a first-class argument.
 
-#Interpreter Pattern
+## Interpreter Pattern
 We use the interpreter pattern to specify how to evaluate sentences in a language. The basic idea is to have a class for each symbol (terminal or non-terminal) in a specialized computer language. 
 The syntax tree of a sentence in the language is an instance of the composite pattern and is used to evaluate (interpret) the sentence for a client.
+
+## Iterator Pattern
+In the iterator pattern, an iterator is used to traverse a container and access the container's elements. The iterator pattern decouples algorithms from containers. 
+In some cases, algorithms are necessarily container-specific and thus cannot be decoupled.
+
+For example, the hypothetical algorithm SearchForElement can be implemented generally using a specified type of iterator rather than implementing it as a container-specific algorithm. 
+This allows SearchForElement to be used on any container that supports the required type of iterator.
 
