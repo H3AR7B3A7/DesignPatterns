@@ -182,3 +182,18 @@ In some cases, algorithms are necessarily container-specific and thus cannot be 
 For example, the hypothetical algorithm SearchForElement can be implemented generally using a specified type of iterator rather than implementing it as a container-specific algorithm. 
 This allows SearchForElement to be used on any container that supports the required type of iterator.
 
+...
+
+# Other Mentionables
+
+## Static Factory Method
+Pro:
+- They have names.
+- They are not required to create a new object each time they’re invoked.
+- They can return an object of any subtype of their return type.
+- The class of the returned object can vary from call to call as a function of the input parameters.
+- The returned object need not exist when writing the class containing the method.
+
+Con:
+- Classes without public or protected constructors can't be subclassed.
+- Harder to find for programmers, so it will require some naming conventions.
