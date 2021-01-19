@@ -9,7 +9,8 @@ public class StaticFactoryMethod {
         Animal dog2 = Animal.createDog("Fifi");
         Animal dog3 = Animal.createDog("Wolf");
 
-        System.out.println(dog3.toString());
+        System.out.println(dog3);
+        System.out.println(dog2);
 
         System.out.println(cat.equals(cat2));
         System.out.println(dog.equals(dog2));
