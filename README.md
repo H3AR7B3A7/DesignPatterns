@@ -190,8 +190,8 @@ The mediator pattern defines an object that encapsulates how a set of objects in
 Objects no longer communicate directly with each other, but instead communicate through the mediator. This reduces the dependencies between communicating objects, thereby reducing coupling.
 
 ## Memento Pattern
-The memento pattern provides the ability to restore an object to its previous state (undo via rollback).
-The memento pattern is implemented with three objects: the originator, a caretaker and a memento. The originator is some object that has an internal state.
+The memento pattern provides the ability to restore an object to its previous state (undo via a rollback).
+We implement it with three objects: the originator, a caretaker and a memento. The originator is some object that has an internal state.
 The caretaker is going to do something to the originator, but wants to be able to undo the change. 
 The caretaker first asks the originator for a memento object. Then it does whatever operation (or sequence of operations) it was going to do. 
 To roll back to the state before the operations, it returns the memento object to the originator. 
