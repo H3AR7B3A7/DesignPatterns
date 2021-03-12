@@ -12,6 +12,7 @@ Design patterns can be divided in:
 - Structural Design Patterns
 - Behavioral Design Patterns
 
+
 # Creational Design Patterns
 
 ## Singleton Pattern
@@ -92,6 +93,7 @@ optionally overridden by derived classes, rather than by calling a constructor.
 We use the builder pattern to provide a flexible solution to various object creation problems in object-oriented programming. 
 The intent of the Builder design pattern is to separate the construction of a complex object from its representation.
 
+
 # Structural Design Patterns
 
 ## Adapter Pattern
@@ -138,6 +140,7 @@ In short, a proxy is a wrapper or agent object that is being called by the clien
 In the proxy, extra functionality can be provided, for example caching when operations on the real object are resource intensive, or checking preconditions before invoking operations on the real object. 
 For the client, usage of a proxy object is similar to using the real object, because both implement the same interface.
 
+
 # Behavioral Design Patterns
 
 ## Chain Of Responsibility Pattern
@@ -182,7 +185,40 @@ In some cases, algorithms are necessarily container-specific and thus cannot be 
 For example, the hypothetical algorithm SearchForElement can be implemented generally using a specified type of iterator rather than implementing it as a container-specific algorithm. 
 This allows SearchForElement to be used on any container that supports the required type of iterator.
 
-...
+## Mediator Pattern
+The mediator pattern defines an object that encapsulates how a set of objects interact. With the mediator pattern, we encapsulate communication between objects within a mediator object. 
+Objects no longer communicate directly with each other, but instead communicate through the mediator. This reduces the dependencies between communicating objects, thereby reducing coupling.
+
+## Memento Pattern
+The memento pattern provides the ability to restore an object to its previous state (undo via rollback).
+The memento pattern is implemented with three objects: the originator, a caretaker and a memento. The originator is some object that has an internal state.
+The caretaker is going to do something to the originator, but wants to be able to undo the change. 
+The caretaker first asks the originator for a memento object. Then it does whatever operation (or sequence of operations) it was going to do. 
+To roll back to the state before the operations, it returns the memento object to the originator. 
+The memento object itself is an opaque object (one which the caretaker cannot, or should not, change). 
+When using this pattern, care should be taken if the originator may change other objects or resources. The memento pattern operates on a single object.
+
+## Observer Pattern
+In the observer pattern, an object named the subject, maintains a list of its dependents, called observers, and notifies them automatically of any state changes,
+usually by calling one of their methods. It is mainly used for implementing distributed event handling systems, in "event driven" software.
+
+## State Pattern
+The state pattern allows an object to alter its behavior when its internal state changes. This pattern is close to the concept of finite-state machines.
+It can be interpreted as a strategy pattern, which is able to switch a strategy through invocations of methods defined in the pattern's interface.
+
+## Strategy Pattern
+The strategy pattern enables selecting an algorithm at runtime. Instead of implementing a single algorithm directly, code receives run-time instructions as to which in a family of algorithms to use.
+For instance, a class performing validation on incoming data may use the strategy pattern to select a validation algorithm depending on the type of data, the source of the data, user choice, or other discriminating factors.
+We don't know these factors until run-time and may require radically different validation to be performed. Other validating objects may use the validation algorithms (strategies) encapsulated separately from the validating object, 
+in different areas of the system (or even different systems) without code duplication.
+
+## Template Pattern
+The template method is a method in a superclass, usually an abstract superclass, and defines the skeleton of an operation in terms of a number of high-level steps.
+These steps are themselves implemented by additional helper methods in the same class as the template method.
+The helper methods may be either abstract methods, requiring subclasses to provide concrete implementations, or hook methods, 
+which have empty bodies in the superclass. Subclasses can (but are not required to) customize the operation by overriding the hook methods. 
+The intent of the template method is to define the overall structure of the operation, while allowing subclasses to refine, or redefine, certain steps.
+
 
 # Other Mentionables
 
