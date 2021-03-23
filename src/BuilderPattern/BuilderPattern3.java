@@ -8,8 +8,8 @@ public class BuilderPattern3 {
         UUID uuid = UUID.randomUUID();
         SomeComplexObject obj = new SomeComplexObject.Builder(1,uuid)
                 .name("Steven")
-                .birthDay(LocalDate.now())
-                .age(1)
+                .birthDay(LocalDate.now().minusYears(31))
+                .age(31)
                 .build();
         System.out.println(obj);
     }
