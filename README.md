@@ -248,3 +248,8 @@ Con:
 Dependency injection is a technique in which an object receives other objects that it depends on. 
 These other objects are called dependencies. In the typical "using" relationship the receiving object
 is called a client, and the passed (that is, "injected") object is called a service.
+
+## Avoiding Object Creation
+We should consider reusing an expensive object to avoid creating it multiple times. This can drastically improve performance.
+Likewise, we should avoid unnecessary boxing of primitives in repetitive operations to avoid repeated creation of their wrapper variants.
+
