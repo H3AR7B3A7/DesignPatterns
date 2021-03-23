@@ -9,7 +9,7 @@ public class BuilderPattern3 {
         SomeComplexObject obj = new SomeComplexObject.Builder(1,uuid)
                 .name("Steven")
                 .birthDay(LocalDate.now())
-                .age(0)
+                .age(1)
                 .build();
         System.out.println(obj);
     }
