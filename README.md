@@ -239,3 +239,8 @@ Pro:
 Con:
 - Classes without public or protected constructors can't be subclassed.
 - Harder to find for programmers, so it will require some naming conventions.
+
+## Dependency Injection
+Dependency injection is a technique in which an object receives other objects that it depends on. 
+These other objects are called dependencies. In the typical "using" relationship the receiving object
+is called a client, and the passed (that is, "injected") object is called a service.
