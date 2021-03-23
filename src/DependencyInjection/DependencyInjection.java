@@ -22,12 +22,13 @@ class SpellChecker {
         this.dictionary = Objects.requireNonNull(dictionary);
     }
 
-    public boolean isValid(String word){
+    public boolean isValid(String word) {
         return dictionary.getWords().contains(word);
     }
-    public List<String> suggestions(String typo){
+
+    public List<String> suggestions(String typo) {
         return dictionary.getWords().stream()
-                .filter(word -> word.startsWith(typo.substring(0,typo.length()-1)))
+                .filter(word -> word.startsWith(typo.substring(0, typo.length() - 1)))
                 .collect(Collectors.toList());
     }
 }
@@ -39,21 +40,27 @@ abstract class Lexicon {
 }
 
 class EnglishDictionary extends Lexicon {
-    private final Set<String> words = new TreeSet<>();
-    {words.add("test");}
+    private static final Set<String> WORDS = new TreeSet<>();
+
+    static {
+        WORDS.add("test");
+    }
 
     @Override
     public Set<String> getWords() {
-        return new TreeSet<>(words);
+        return new TreeSet<>(WORDS);
     }
 }
 
 class DutchDictionary extends Lexicon {
-    private final Set<String> words = new TreeSet<>();
-    {words.add("test");}
+    private static final Set<String> WORDS = new TreeSet<>();
+
+    static {
+        WORDS.add("test");
+    }
 
     @Override
     public Set<String> getWords() {
-        return new TreeSet<>(words);
+        return new TreeSet<>(WORDS);
     }
 }
