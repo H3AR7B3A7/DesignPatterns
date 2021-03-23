@@ -73,10 +73,16 @@ Pro:
  - This is the most widely used approach for Singleton class as it doesn't require synchronization.
  - This solution is thread-safe without requiring special language constructs.
 
+Con:
+ - Just like all the previous patterns, it also can't handle reflection.
+
 #### ENUM
 Pro:
  - It is the only singleton that can handle reflection.
  - Very easy to read.
+
+Con:
+ - Can't inherit from a super class. However, enums can implement interfaces.
 
 ## Prototype Pattern
 We use the prototype pattern when the type of objects to create is determined by a prototypical instance, which is cloned to produce new objects.  
