@@ -229,6 +229,10 @@ The intent of the template method is to define the overall structure of the oper
 # Other Mentionables
 
 ## Static Factory Method
+A static factory method is a public static method on the object that returns a new instance of the object. 
+These type of methods share the same benefits as the traditional factory method design pattern. 
+This is especially useful for value objects that don't have a separate interface and implementation class.
+
 Pro:
 - They have names.
 - They are not required to create a new object each time they’re invoked.
