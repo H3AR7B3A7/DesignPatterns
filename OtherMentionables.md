@@ -18,15 +18,15 @@ Con:
 
 ## Dependency Injection
 Dependency injection is a technique in which an object receives other objects that it depends on.
-These other objects are called dependencies. In the typical "using" relationship the receiving object
-is called a client, and the passed (that is, "injected") object is called a service.
+We call these other objects dependencies. In the typical "using" relationship we call the receiving object
+a client, and the passed (that is, "injected") object a service.
 
 ## Avoiding Object Creation
 We should consider reusing an expensive object to avoid creating it multiple times. This can drastically improve performance.
 Likewise, we should avoid unnecessary boxing of primitives in repetitive operations to avoid repeated creation of their wrapper variants.
 
 ## Cleaning Objects
-An Object that has been created during the program execution is automatically removed by Garbage Collector (GC).
+The Garbage Collector removes an Object that has been created during the program execution automatically after use.
 When an object not referenced by any thread and when JVM determines that this object can't be accessed, then it can be eligible for garbage collection.
 
 Finalize() is an object method, which is automatically called by the garbage collector before it attempts to remove the object from the heap.
@@ -35,3 +35,9 @@ An object of CleaningObjects class gets notified automatically when an object be
 An object that is being garbage collected needs to be registered with the cleaner object by using the register() method.
 
 Usually the use of a cleaner is unnecessary. We only use it in specific situations, for example when we want to make sure sensitive information doesn't stay in memory.
+
+## Composition
+There is no way to extend an instantiable class and add a value component while preserving the equals contract.
+For this reason we should favor composition over inheritance. Instead of inheriting from an object we can add it as a private field.
+We can provide a public 'view' method to return the field to compare the object with instances of its member type.
+
