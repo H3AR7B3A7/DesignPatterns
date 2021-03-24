@@ -12,5 +12,10 @@ Design patterns can be divided in:
 - [Structural Design Patterns](StructuralDesignPatterns.md)
 - [Behavioral Design Patterns](BehavioralDesignPatterns.md)
 
-Other best practice code structures included in this repository:
+Other mentionable code structures included in this repository:
 - [Other Mentionables](OtherMentionables.md)
+
+### Interesting repositories from other users:
+- [Java - The Algorithms](https://github.com/TheAlgorithms/Java/blob/master/DIRECTORY.md)
+- [Algorithms & Data Structures - William Fiset](https://github.com/williamfiset/Algorithms)
+- [Design Patterns Implemented in Java - Ilkka Seppälä](https://github.com/iluwatar/java-design-patterns)
