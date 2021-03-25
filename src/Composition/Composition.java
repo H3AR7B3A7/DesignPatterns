@@ -12,7 +12,7 @@ public class Composition {
 
 
     /**
-     * This way both equals methods adhere to contract of being:
+     * Equals methods must adhere to contract:
      * - Reflexive
      * - Symmetric
      * - Transitive
