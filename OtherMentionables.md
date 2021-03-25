@@ -45,7 +45,7 @@ We can provide a public 'view' method to return the field to compare the object 
 We can cache a value when the cost of computing it is significant, to prevent repeating the computation.
 
 ## Reflection
-Reflection is not so much a code structure as it is an API, but because it is mentioned a couple of times in this repository there is an example of it too.
+Reflection is not so much a code structure, but rather a Java API. Because it is mentioned a couple of times in this repository there is an example of it too.
 It is used to examine or modify the behavior of methods, classes, interfaces at runtime. The required classes for reflection are provided under java.lang.reflect package.
 Reflection gives us information about the class to which an object belongs and also the methods of that class which can be executed by using the object.
 We can use it to invoke methods at runtime irrespective of the access specifier used with them.
