@@ -40,8 +40,8 @@ class MyProxy extends Topic {
     public void doSomeWork() {
         System.out.println("Proxy call happening now ...");
         System.out.println(currentUser + " wants to invoke a proxy method.");
-        if(registeredUsers.contains(currentUser)){
-            if(topic == null){
+        if (registeredUsers.contains(currentUser)) {
+            if (topic == null) {
                 topic = new ConcreteTopic();
             }
             topic.doSomeWork();
