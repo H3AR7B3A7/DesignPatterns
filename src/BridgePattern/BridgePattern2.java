@@ -13,6 +13,7 @@ public class BridgePattern2 {
         electronicGoods.setState(presentState);
         electronicGoods.moveToCurrentState();
 
+        System.out.println("DVD:");
         presentState = new OffState();
         electronicGoods = new DVD();
         electronicGoods.setState(presentState);
