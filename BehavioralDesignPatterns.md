@@ -75,3 +75,8 @@ These steps are themselves implemented by additional helper methods in the same 
 The helper methods may be either abstract methods, requiring subclasses to provide concrete implementations, or hook methods,
 which have empty bodies in the superclass. Subclasses can (but are not required to) customize the operation by overriding the hook methods.
 The intent of the template method is to define the overall structure of the operation, while allowing subclasses to refine, or redefine, certain steps.
+
+## Visitor Pattern
+The visitor design pattern is a way of separating an algorithm from an object structure on which it operates. A practical result of this separation is the ability to add new operations to existing object structures
+without modifying the structures. It is one way to follow the open/closed principle. In essence, the visitor allows adding new virtual functions to a family of classes, without modifying the classes. 
+Instead, a visitor class is created that implements all the appropriate specializations of the virtual function. The visitor takes the instance reference as input, and implements the goal through double dispatch.
