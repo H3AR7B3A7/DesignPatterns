@@ -29,7 +29,7 @@ class MyClass implements OriginalInterface {
     }
 }
 
-interface Visitor{
+interface Visitor {
     void visit(MyClass myClass);
 }
 
@@ -38,7 +38,7 @@ class ConcreteVisitor implements Visitor {
     public void visit(MyClass myClass) {
         System.out.printf("Current value is: %d.\r\n", myClass.getMyInt());
         System.out.println("Visitor printing double of value...");
-        System.out.printf("Printed value is: %d.\r\n", myClass.getMyInt()*2);
+        System.out.printf("Printed value is: %d.\r\n", myClass.getMyInt() * 2);
         System.out.println("End of visit...");
     }
 }
