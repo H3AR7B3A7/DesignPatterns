@@ -17,6 +17,9 @@ abstract class BasicEngineering {
         completeMath();
         completeSoftSkills();
         completeSpecialPaper();
+        if (isAdditionalPapersNeeded()) {
+            completeAdditionalPapers();
+        }
     }
 
     private void completeMath() {
@@ -28,6 +31,14 @@ abstract class BasicEngineering {
     }
 
     public abstract void completeSpecialPaper();
+
+    private void completeAdditionalPapers() {
+        System.out.println("4.Additional Papers are required for this course.");
+    }
+
+    boolean isAdditionalPapersNeeded() {
+        return true;
+    }
 }
 
 class ComputerScience extends BasicEngineering {
@@ -41,5 +52,10 @@ class Electronics extends BasicEngineering {
     @Override
     public void completeSpecialPaper() {
         System.out.println("3.Digital Logic and Circuit Theory");
+    }
+
+    @Override
+    boolean isAdditionalPapersNeeded() {
+        return false;
     }
 }
