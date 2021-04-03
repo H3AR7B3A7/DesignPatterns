@@ -48,7 +48,7 @@ class Originator {
 }
 
 class Memento {
-    private String state;
+    private final String state;
 
     public Memento(String state) {
         this.state = state;
@@ -60,7 +60,7 @@ class Memento {
 }
 
 class Caretaker {
-    private List<Memento> mementoList = new ArrayList<Memento>();
+    private final List<Memento> mementoList = new ArrayList<Memento>();
 
     public void add(Memento state) {
         mementoList.add(state);
