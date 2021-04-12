@@ -50,3 +50,8 @@ It is used to examine or modify the behavior of methods, classes, interfaces at 
 Reflection gives us information about the class to which an object belongs and also the methods of that class which can be executed by using the object.
 We can use it to invoke methods at runtime irrespective of the access specifier used with them.
 
+## MVC - Pattern
+The MVC pattern is commonly used for developing user interfaces that divides the related program logic into three interconnected elements.
+This is done to separate internal representations of information from the way information is presented to and accepted from the user.
+It usually consists of several other design patterns. At a minimum the MVC pattern uses Observer pattern which is a Behavioral pattern.
+There are some more design patterns used by MVC. Sometimes the patterns it uses may depend on the particular implementation too.
