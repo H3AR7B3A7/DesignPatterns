@@ -55,6 +55,10 @@ To roll back to the state before the operations, it returns the memento object t
 The memento object itself is an opaque object (one which the caretaker cannot, or should not, change).
 When using this pattern, care should be taken if the originator may change other objects or resources. The memento pattern operates on a single object.
 
+## Null Object Pattern
+A null object is an object with no referenced value or with defined neutral ("null") behavior. The null object design pattern describes the uses of such objects and their behavior (or lack thereof).
+It can be regarded as a special case of the State pattern and the Strategy pattern.
+
 ## Observer Pattern
 In the observer pattern, an object named the subject, maintains a list of its dependents, called observers, and notifies them automatically of any state changes,
 usually by calling one of their methods. It is mainly used for implementing distributed event handling systems, in "event driven" software.
